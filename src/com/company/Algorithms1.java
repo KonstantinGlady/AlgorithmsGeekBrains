@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public class Algorithms1 {
     static int[] arrIn = Support.getIntArray();
- 
+
     public static void main(String[] args) {
 
         //TODO 1. Есть массив целых чисел. Найти все тройки чисел, которые в сумме дают ноль
@@ -22,18 +22,15 @@ public class Algorithms1 {
 
         //TODO 2.Есть массив целых чисел. Найти два наибольших значения в массиве
         System.out.println("Задание. Наибольшие значения: ");
-        int[] arrIn = Support.getRandomIntArray(100, 0, 100);
+        int[] arrIn = Support.getRandomIntArray(100, -100, 100);
         System.out.println(Arrays.toString(arrIn));
-        int biggestOne = -1;
-        int biggestSecond = -1;
+        int biggestOne = arrIn[0];
+        int biggestSecond = arrIn[1];
         for (int a : arrIn) {
             if (a > biggestOne) {
+                biggestSecond = biggestOne;
                 biggestOne = a;
-                //   System.out.println("1 "+biggestOne);
-            }
-            if (a > biggestSecond && a < biggestOne) {
-                biggestSecond = a;
-                //  System.out.println("2 "+biggestSecond);
+              
             }
 
         }
