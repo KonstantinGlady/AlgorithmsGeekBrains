@@ -30,7 +30,7 @@ public class Algorithms1 {
             if (a > biggestOne) {
                 biggestSecond = biggestOne;
                 biggestOne = a;
-              
+
             }
 
         }
@@ -45,7 +45,8 @@ public class Algorithms1 {
                 if ((arrIn[k] + arrIn[i] + arrIn[j]) == 0) {
 
                     System.out.println(arrIn[i] + "  " + arrIn[j] + "  " + arrIn[k]);
-                    //break; // можно убрать часть дублей идущих подряд,если нужны только значения, а не позиции в массиве для ускорения обхода
+                    break; // можно убрать часть дублей идущих подряд,если нужны только значения, а не позиции в массиве для ускорения обхода
+                  
                 }
             }
 
