@@ -49,10 +49,13 @@ public class Algorithms3 {
         String string;
         while (true) {
             string = getString();
+            System.out.println("string from console: "+ string);
             if (string.equals("")) {
                 break;
             }
-            reverseString(string);
+            reverseString(string);// 1 way
+            System.out.println("");
+            System.out.println(reverse(string)); // another one
         }
 
         //TODO 3. Создать класс для реализации дека.
@@ -61,15 +64,23 @@ public class Algorithms3 {
         deque.addFirst(11);
         deque.addFirst(22);
         deque.addFirst(33);
-        System.out.println("deleted: "+deque.removeFirst());
-       deque.addFirst(44);
+        System.out.println("deleted: " + deque.removeFirst());
+        deque.addFirst(44);
         deque.addLast(10);
         deque.addLast(20);
-        System.out.println("deleted: " +deque.removeLast());
-        for (int i = 0; i < 10 ; i++) {
+        System.out.println("deleted: " + deque.removeLast());
+        for (int i = 0; i < 10; i++) {
             System.out.println(deque.removeFirst());
         }
 
+    }
+
+    private static String reverse(String s) {
+        int N = s.length();
+        if (N <= 1) return s;
+        String a = s.substring(0, N / 2);
+        String b = s.substring(N / 2, N);
+        return reverse(b) + reverse(a);
     }
 
     private static void reverseString(String string) {
