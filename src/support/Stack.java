@@ -1,9 +1,9 @@
 package support;
 
 public class Stack<T> {
-   private T[] stack;
-   private int top;
-   private int size;
+    private T[] stack;
+    private int top;
+    private int size;
 
     public Stack(int size) {
         this.size = size;
