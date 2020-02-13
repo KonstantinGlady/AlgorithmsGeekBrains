@@ -55,7 +55,8 @@ public class Algorithms3 {
             }
             reverseString(string);// 1 way
             System.out.println("");
-            System.out.println(reverse(string)); // another one
+            System.out.println(reverse(string)); // another one recursive
+            reverseWithStack(string); //with stack
         }
 
         //TODO 3. Создать класс для реализации дека.
@@ -73,6 +74,17 @@ public class Algorithms3 {
             System.out.println(deque.removeFirst());
         }
 
+    }
+
+    private static void reverseWithStack(String string) {
+        java.util.Stack<Character> stack = new java.util.Stack<>();
+        for (int i = 0; i < string.length() ; i++) {
+            stack.push(string.charAt(i));
+        }
+
+        for (int i = 0; i < string.length(); i++) {
+            System.out.print(stack.pop());
+        }
     }
 
     private static String reverse(String s) {
