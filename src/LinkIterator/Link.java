@@ -14,4 +14,8 @@ public class Link {
     public void display() {
         System.out.println("name " + name + " age " + age);
     }
+
+    public String getName() {
+        return name;
+    }
 }
