@@ -26,7 +26,7 @@ public class Algorithms5 {
         int n = val.length;
 
         System.out.println("backpack solution: " + Backpack.recursive(weight, val, w, n));
-        
+
         //TODO 3. В парсер выражений из файла RecursiveDescentParser.java добавть возможность вычисления функция sin(n), cos(n), tg(n), ctg(n), ln(n).
 
         String expr = "tg(22) - ctg(43) + sin(20) + ln(3) * cos(2) + 2.111 * 3.5 + ( 3 + 4 * ( 2.1 + 3 ) - 10 ) * ( 5 - 7 + 4 - 2 ) + 11";
