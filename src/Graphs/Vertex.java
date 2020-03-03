@@ -9,4 +9,12 @@ public class Vertex {
         this.label = label;
         this.wasVisited = false;
     }
+
+    public Vertex getPrev() {
+        return prev;
+    }
+
+    public void setPrev(Vertex prev) {
+        this.prev = prev;
+    }
 }

@@ -63,7 +63,7 @@ public class Graph {
             int v1 = queue.remove();
             while ((v2 = getAdjUnvisitedVertex(v1)) != -1) {
                 vertexList[v2].wasVisited = true;
-                vertexList[v2].prev = vertexList[v1];
+                vertexList[v2].setPrev(vertexList[v1]);
                 // displayVertex(v2);
                 queue.insert(v2);
             }
