@@ -13,8 +13,8 @@ public class GraphApp {
         graph.addEdge(1, 2); //BC
         graph.addEdge(0, 3); //AD
         graph.addEdge(3, 4); //DE
-        graph.dfs();
-        System.out.println("bfs: ");
+       // graph.dfs();
+       // System.out.println("bfs: ");
         graph.bfs();
     }
 }
