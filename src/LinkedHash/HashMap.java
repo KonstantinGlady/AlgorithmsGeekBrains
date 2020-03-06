@@ -13,20 +13,20 @@ public class HashMap {
         }
     }
 
-    public void add(int key, int item) {
-        int doubleHash = getDoubleHash(key);
+    public void add(int item) {
+        int doubleHash = getDoubleHash(item);
         int hash = getHash(doubleHash);
         if (table[hash] == null) {
-            table[hash] = new LinkedHashEntry(key, item);
+            table[hash] = new LinkedHashEntry(item);
         } else {
             LinkedHashEntry entry = table[hash];
-            while (entry.getNext() != null && entry.getKey() != key) {
+            while (entry.getNext() != null && entry.getKey() != item) {
                 entry = entry.getNext();
             }
-            if (entry.getKey() == key) {
+            if (entry.getKey() == item) {
                 entry.setValue(item);
             } else {
-                entry.setNext(new LinkedHashEntry(key, item));
+                entry.setNext(new LinkedHashEntry(item));
             }
         }
     }

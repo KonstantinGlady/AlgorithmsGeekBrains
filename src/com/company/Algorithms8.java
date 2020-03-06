@@ -48,12 +48,12 @@ public class Algorithms8 {
             map.add(key, key);
         }*/
         map.display();
-        map.add(10, 10);
-        map.add(11, 11);
-        map.add(12, 12);
-        map.add(22, 22);
-        map.add(20, 20);
-        map.add(22, 22);
+        map.add(10);
+        map.add(11);
+        map.add(12);
+        map.add(22);
+        map.add(20);
+        map.add(22);
 
 
         System.out.println("added 10");

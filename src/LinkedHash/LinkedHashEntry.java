@@ -1,26 +1,25 @@
 package LinkedHash;
 
 public class LinkedHashEntry {
-    private int key;
-    private int value;
+
+    private int data;
     private LinkedHashEntry next;
 
-    public LinkedHashEntry(int key, int value) {
-        this.key = key;
-        this.value = value;
+    public LinkedHashEntry(int data) {
+        this.data = data;
         this.next = null;
     }
 
     public int getKey() {
-        return key;
+        return data;
     }
 
     public int getValue() {
-        return value;
+        return data;
     }
 
     public void setValue(int value) {
-        this.value = value;
+        this.data = value;
     }
 
     public LinkedHashEntry getNext() {
