@@ -42,10 +42,10 @@ public class Algorithms8 {
         int l = 10;
         LinkedHashEntry entry;
 
-        HashMap map = new HashMap(size);
+        HashMap<Integer> map = new HashMap<>(size);
        /* for (int i = 0; i < n; i++) {
             int key = (int) (Math.random() * size * l);
-            map.add(key, key);
+            map.add(key);
         }*/
         map.display();
         map.add(10);

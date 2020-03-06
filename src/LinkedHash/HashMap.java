@@ -1,7 +1,7 @@
 package LinkedHash;
 
 
-public class HashMap {
+public class HashMap<T extends Integer> {
     private final int SIZE;
     private LinkedHashEntry[] table;
 
@@ -13,11 +13,13 @@ public class HashMap {
         }
     }
 
-    public void add(int item) {
-        int doubleHash = getDoubleHash(item);
+    public void add(T value) {
+
+        int item = value;
+        int doubleHash = getDoubleHash( item);
         int hash = getHash(doubleHash);
         if (table[hash] == null) {
-            table[hash] = new LinkedHashEntry(item);
+            table[hash] = new LinkedHashEntry( item);
         } else {
             LinkedHashEntry entry = table[hash];
             while (entry.getNext() != null && entry.getKey() != item) {
@@ -38,7 +40,8 @@ public class HashMap {
         return key % SIZE;
     }
 
-    public void remove(int item) {
+    public void remove(T value) {
+        int item = value;
         int doubleHash = getDoubleHash(item);
         int hash = getHash(doubleHash);
         if (table[hash] != null) {
@@ -59,7 +62,8 @@ public class HashMap {
         }
     }
 
-    public boolean contains(int item) {
+    public boolean contains(T value) {
+        int item = value;
         int doubleHash = getDoubleHash(item);
         int hash = getHash(doubleHash);
         if (table[hash] == null) {
