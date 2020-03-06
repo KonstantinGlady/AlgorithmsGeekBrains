@@ -1,7 +1,7 @@
 package LinkedHash;
 
 
-public class HashMap<T> {
+public class HashMap {
     private final int SIZE;
     private LinkedHashEntry[] table;
 
